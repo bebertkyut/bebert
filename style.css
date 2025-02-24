@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+  background: #020202;
+}
+
+canvas {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.profilebox {
+  position: fixed; /* Ensures the box stays centered even when scrolling */
+  left: 50%;
+  top: 10%; /* Move the box to the top middle */
+  transform: translate(-50%, -50%);
+  width: 90vw; /* Responsive width for mobile */
+  max-width: 400px; /* Maximum width for larger screens */
+  height: 60vh; /* Responsive height */
+  max-height: 300px; /* Maximum height for larger screens */
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
