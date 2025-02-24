@@ -5,7 +5,7 @@ const canvas = document.getElementById("particleCanvas");
         canvas.height = window.innerHeight;
         
         let particles = [];
-        const particleCount = 100;
+        const particleCount = 150;
         
         class Particle {
             constructor() {
