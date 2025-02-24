@@ -24,7 +24,7 @@ canvas {
   top: 10%; /* Move the box to the top middle */
   transform: translate(-50%, -50%);
   width: 90vw; /* Responsive width for mobile */
-  max-width: 400px; /* Maximum width for larger screens */
+  max-width: 90vh; /* Maximum width for larger screens */
   height: 60vh; /* Responsive height */
   max-height: 300px; /* Maximum height for larger screens */
   background: rgba(255, 255, 255, 0.1);
