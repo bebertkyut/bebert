@@ -7,6 +7,7 @@
 body {
   overflow: hidden;
   background: #020202;
+  overflow-y: auto;
 }
 
 canvas {
@@ -18,23 +19,58 @@ canvas {
   height: 100vh;
 }
 
-.profilebox {
-  position: fixed; /* Ensures the box stays centered even when scrolling */
-  left: 50%;
-  top: 10%; /* Move the box to the top middle */
-  transform: translate(-50%, -50%);
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.maps,
+.profile,
+.button,
+.company,
+.technologies,
+.project {
+  display: flex; /* Enables flexbox */
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
   width: 90vw; /* Responsive width for mobile */
   max-width: 90vh; /* Maximum width for larger screens */
-  height: 60vh; /* Responsive height */
-  max-height: 300px; /* Maximum height for larger screens */
   background: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
   backdrop-filter: blur(10px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
   color: white;
   font-size: 1.5rem;
   text-align: center;
+  margin: 1vh;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.maps {
+  height: 60vh;
+  max-height: 30vh;
+}
+
+.profile {
+  height: 30vh;
+  max-height: 20vh;
+}
+
+.button {
+  height: 20vh;
+  max-height: 5vh;
+}
+
+.company {
+  height: 30vh;
+  max-height: 20vh;
+}
+
+.technologies {
+  height: 60vh;
+  max-height: 30vh;
+}
+
+.project {
+  height: 60vh;
+  max-height: 50vh;
 }
