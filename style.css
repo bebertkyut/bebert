@@ -30,9 +30,7 @@ canvas {
 .maps,
 .profile,
 .button,
-.company-school,
-.technologies,
-.project {
+.company-school {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -42,7 +40,6 @@ canvas {
   backdrop-filter: blur(10px);
   color: white;
   font-size: 1.5rem;
-  text-align: center;
   margin: 1vh;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
@@ -138,9 +135,9 @@ canvas {
   gap: 8px;
   padding: 10px 16px;
   border-radius: 50px;
-  background-color: white;
-  color: black;
-  font-size: 16px;
+  background-color: #ad49e1;
+  color: white;
+  font-size: 1rem;
   font-weight: bold;
   border: none;
   cursor: pointer;
@@ -151,20 +148,20 @@ canvas {
 .rounded-button svg {
   width: 20px;
   height: 20px;
-  stroke: black !important;
+  stroke: white !important;
   stroke-width: 2;
   fill: none;
   transition: stroke 0.2s ease-in-out, fill 0.2s ease-in-out;
 }
 
 .resume-button:hover .rounded-button {
-  background-color: #ad49e1;
-  color: white;
+  background-color: white;
+  color: black;
   transform: scale(1.1);
 }
 
 .resume-button:hover .rounded-button svg g {
-  stroke: white !important;
+  stroke: black !important;
 }
 
 .button {
@@ -221,12 +218,16 @@ canvas {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 0;
 }
 
 .company {
   display: flex;
   gap: 15px;
   padding: 4vh;
+  margin-left: 0;
+  width: 100%;
 }
 
 .company-name-date-role {
@@ -278,11 +279,172 @@ canvas {
 }
 
 .technologies {
-  height: 60vh;
-  max-height: 30vh;
+  height: 30vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background: transparent;
+  box-shadow: none;
+  width: 90vw;
+  max-width: 90vh;
+}
+
+.technology-box {
+  width: 22%;
+  height: 80%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+.technology-box img,
+.technology-box svg {
+  width: 100px;
+  height: 100px;
+  filter: brightness(0) invert(1);
+  transition: filter 0.3s ease-in-out;
+}
+
+.technology-box:hover img,
+.technology-box:hover svg {
+  filter: none;
+}
+
+h2 {
+  font-size: 2rem;
+  align-items: flex-start;
+  justify-content: left;
+  color: white;
+  margin-bottom: 1rem;
 }
 
 .project {
   height: 60vh;
-  max-height: 50vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 90vw;
+  max-width: 90vh;
+  row-gap: 5vh;
+}
+
+.project-box {
+  width: 48%;
+  height: 90%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.project-box img {
+  width: 90%;
+  height: auto;
+  max-height: 80%;
+  object-fit: contain;
+  align-self: center;
+  margin-top: 2vh;
+}
+
+.project-box h3 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.project-box p {
+  font-size: 1rem;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.project-box h3,
+.project-box p {
+  margin-top: 1vh;
+  margin-left: 1vw;
+  text-align: left;
+  width: 90%;
+  text-align: justify;
+}
+
+.capsule-container {
+  margin-top: 1vh;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding-left: 1vw;
+}
+
+.project-capsule {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 0.9rem;
+  padding: 5px 12px;
+  border-radius: 20px;
+  display: inline-block;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #ad49e1;
+}
+
+.visit-button {
+  text-decoration: none;
+}
+
+.project-capsule-button {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 50px;
+  background-color: #ad49e1;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out, color 0.2s ease-in-out,
+    transform 0.2s ease-in-out;
+}
+
+.project-capsule-button svg {
+  width: 20px;
+  height: 20px;
+  stroke: white !important;
+  stroke-width: 2;
+  fill: none;
+  transition: stroke 0.2s ease-in-out, fill 0.2s ease-in-out;
+}
+
+.visit-button:hover .project-capsule-button {
+  background-color: white;
+  color: black;
+  transform: scale(1.1);
+}
+
+.visit-button:hover .project-capsule-button svg {
+  stroke: black !important;
 }

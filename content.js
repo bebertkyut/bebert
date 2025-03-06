@@ -19,18 +19,19 @@ function initMap() {
 document.addEventListener("DOMContentLoaded", initMap);
 
 function toggleCapsule(selected) {
-  let capsule = document.querySelector('.capsule');
-  let companyDiv = document.querySelector('.company');
-  let schoolDiv = document.querySelector('.school');
+    let capsule = document.querySelector('.capsule');
+    let experienceSection = document.getElementById("experience-section");
+    let educationSection = document.getElementById("education-section");
 
-  if (selected === 'education') {
-      capsule.style.left = "50%";
-      companyDiv.style.display = "none"; 
-      schoolDiv.style.display = "flex";
-  } else {
-      capsule.style.left = "0%";
-      companyDiv.style.display = "flex"; 
-      schoolDiv.style.display = "none"; 
-  }
+    if (selected === 'education') {
+        capsule.style.left = "50%";
+        experienceSection.style.display = "none";
+        educationSection.style.display = "block";
+    } else {
+        capsule.style.left = "0%";
+        experienceSection.style.display = "block";
+        educationSection.style.display = "none";
+    }
 }
+
 

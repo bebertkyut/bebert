@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glowing Particle Background</title>
+    <title>Bebert | Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -33,25 +33,25 @@
                 </div>
                 <div class="icons">
                     <!-- GitHub Icon -->
-                    <a href="https://github.com/yourusername" target="_blank" aria-label="GitHub">
+                    <a href="https://github.com/bebertkyut" target="_blank" aria-label="GitHub">
                         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path d="M12 2C6.48 2 2 6.48 2 12C2 16.84 5.58 20.87 10.11 21.94C10.61 22.03 10.82 21.74 10.82 21.5C10.82 21.31 10.81 20.69 10.81 19.97C7.73 20.64 6.97 18.64 6.97 18.64C6.5 17.5 5.78 17.21 5.78 17.21C4.82 16.65 5.85 16.67 5.85 16.67C6.92 16.75 7.45 17.77 7.45 17.77C8.37 19.45 9.96 19 10.55 18.76C10.64 18.05 10.9 17.58 11.18 17.34C8.64 17.08 6.03 16.04 6.03 11.99C6.03 10.87 6.41 9.96 7.06 9.26C6.97 9.02 6.62 8.1 7.14 6.84C7.14 6.84 8 6.56 10.75 8.24C11.58 8 12.46 7.88 13.34 7.88C14.22 7.88 15.1 8 15.93 8.24C18.68 6.56 19.54 6.84 19.54 6.84C20.06 8.1 19.71 9.02 19.62 9.26C20.27 9.96 20.65 10.87 20.65 11.99C20.65 16.05 18.04 17.07 15.5 17.32C15.86 17.63 16.17 18.2 16.17 19.06C16.17 20.31 16.16 21.24 16.16 21.5C16.16 21.74 16.37 22.03 16.87 21.94C21.4 20.87 24.98 16.84 24.98 12C24.98 6.48 20.52 2 12 2Z"/>
                         </svg>
                     </a>
                 
                     <!-- LinkedIn Icon -->
-                    <a href="https://www.linkedin.com/in/yourusername" target="_blank" aria-label="LinkedIn">
+                    <a href="https://www.linkedin.com/in/john-carlo-alberto-69bb45217/" target="_blank" aria-label="LinkedIn">
                         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6C1.14 6 0 4.88 0 3.5C0 2.12 1.14 1 2.5 1C3.86 1 4.98 2.12 4.98 3.5ZM4.98 8V22H0.02V8H4.98ZM9 8H13.69V10.24H13.76C14.36 9.25 15.55 8 17.44 8C21.14 8 22 10.33 22 13.62V22H17V14.74C17 12.85 16.96 10.53 14.55 10.53C12.12 10.53 11.75 12.65 11.75 14.61V22H7V8H9Z"/>
                         </svg>
                     </a>
                 
                     <!-- Resume Download Button -->
-                    <a href="your-resume.pdf" download="Resume.pdf" class="resume-button" aria-label="Download Resume">
+                    <a href="Resume.pdf" download="Resume.pdf" class="resume-button" aria-label="Download Resume">
                         <button class="rounded-button">
                             Resume
                             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <g stroke="black" stroke-width="2" fill="none">
+                                <g stroke="white" stroke-width="2" fill="none">
                                     <path d="M6 2H14L18 6V20C18 21.1 17.1 22 16 22H8C6.9 22 6 21.1 6 20V4C6 2.9 6.9 2 8 2Z"/>
                                     <path d="M12 14V10M10 12L12 14L14 12" stroke-linecap="round" stroke-linejoin="round"/>
                                 </g>
@@ -67,30 +67,104 @@
             <div class="education" onclick="toggleCapsule('education')">Education</div>
           </div>           
           <div class="company-school">
-            <div class="company">
-                <div class="picture">
-                    <img src="./Assets/Experience/PCL.jpg" alt="Company Logo">
+            <!-- Experience Section -->
+            <div id="experience-section">
+                <div class="company">
+                    <div class="picture">
+                        <img src="./Assets/Experience/PCL.jpg" alt="Company Logo">
+                    </div>
+                    <div class="company-name-date-role">
+                        <div class="company-date">February 2025 - Recent</div>
+                        <div class="company-name">Producers Connection Logistics</div>
+                        <div class="company-role">Web Developer Intern</div>
+                    </div>
                 </div>
-                <div class="company-name-date-role">
-                    <div class="company-date">February 2025 - Recent</div>
-                    <div class="company-name">Producers Connection Logistics</div>
-                    <div class="company-role">Web Developer</div>
-                </div>
+                <!-- Add more company divs here -->
             </div>
-            <!-- Hidden School Div -->
-            <div class="school">
-                <div class="picture">
-                    <img src="./Assets/Education/STI.png" alt="School Logo">
+        
+            <!-- Education Section (Hidden by Default) -->
+            <div id="education-section" style="display: none;">
+                <div class="school">
+                    <div class="picture">
+                        <img src="./Assets/Education/STI.png" alt="School Logo">
+                    </div>
+                    <div class="school-name-date-role">
+                        <div class="school-date">2021 - 2025</div>
+                        <div class="school-name">STI College Dasmariñas</div>
+                        <div class="school-role">Bachelor of Science in Computer Science</div>
+                    </div>
                 </div>
-                <div class="school-name-date-role">
-                    <div class="school-date">2020 - 2024</div>
-                    <div class="school-name">STI College Dasmariñas</div>
-                    <div class="school-role">Bachelor of Science in Computer Science</div>
-                </div>
+                <!-- Add more school divs here -->
             </div>
-        </div>        
-        <div class="technologies">Technologies</div>
-        <div class="project">Projects</div>
+        </div>          
+        <div class="technologies">
+            <div class="technology-box">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML Logo">
+                <span>HTML</span>
+            </div>
+            <div class="technology-box">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS Logo">
+                <span>CSS</span>
+            </div>
+            <div class="technology-box">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript Logo">
+                <span>JavaScript</span>
+            </div>
+            <div class="technology-box">
+                <svg class="firebase-logo" viewBox="0 0 256 351" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="#FFC24A" d="M38.1 263.7l89.3-129L77.2 55.4c-4.2-5.8-12.8-4-14.3 3.1L38.1 263.7z"/>
+                    <path fill="#F4BD62" d="M192.1 225.4l-42.6-65.2L133 113c-1.5-4.4-7.4-5-9.4-.9l-87 151.6l79.3 46.5c9.4 5.5 21.1 5.5 30.5 0l74.5-43.8l-28.8-41z"/>
+                    <path fill="#FFA712" d="M143.6 142.5l48.2 77.1l-24.2-131.3c-1.5-8-12.1-9.7-15.6-2.5l-8.4 17.5l-0.1 39.2z"/>
+                    <path fill="#F6820C" d="M38.1 263.7l89.3-129L77.2 55.4c-4.2-5.8-12.8-4-14.3 3.1L38.1 263.7z"/>
+                    <path fill="#FDE068" d="M192.1 225.4l-42.6-65.2L133 113c-1.5-4.4-7.4-5-9.4-.9l-87 151.6l79.3 46.5c9.4 5.5 21.1 5.5 30.5 0l74.5-43.8l-28.8-41z"/>
+                </svg>
+                <span>Firebase</span>
+            </div>
+        </div>
+        <h2>Projects</h2>
+        <div class="project">
+            <div class="project-box">
+                <img src="./Assets/projects/ephphatha.png">
+                <h3>Ephphatha</h3>
+                <p>A web-based voice-to-sign language translator designed to support the Church of God Dasmariñas Deaf Ministry Fellowship, promoting inclusivity and accessibility for individuals with hearing impairments.</p>
+                <div class="capsule-container">
+                    <span class="project-capsule">HTML</span>
+                    <span class="project-capsule">CSS</span>
+                    <span class="project-capsule">JavaScript</span>
+                    <span class="project-capsule">Firebase</span>
+                </div>
+                <a href="https://bebertkyut.github.io/ephphatha/" class="visit-button" aria-label="Visit Website">
+                    <button class="project-capsule-button">
+                        Visit
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                        </svg>
+                    </button>
+                </a>                
+            </div>
+            <div class="project-box">
+                <img src="./Assets/projects/portfolio.png">
+                <h3>Portfolio</h3>
+                <p>you'll find a collection of my projects showcasing my skills in web development, design, and problem-solving. From front-end designs to back-end solutions, each project reflects my passion for coding and creativity.</p>
+                <div class="capsule-container">
+                    <span class="project-capsule">HTML</span>
+                    <span class="project-capsule">CSS</span>
+                    <span class="project-capsule">JavaScript</span> 
+                </div>
+                <a href="https://bebertkyut.github.io/bebert/" class="visit-button" aria-label="Visit Website">
+                    <button class="project-capsule-button">
+                        Visit
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                        </svg>
+                    </button>
+                </a>  
+            </div>
+          </div>
     </div>
     <script src="background.js"></script>
     <script src="content.js"></script>
