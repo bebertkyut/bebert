@@ -6,6 +6,7 @@
     <title>Glowing Particle Background</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <canvas id="particleCanvas"></canvas>
@@ -13,7 +14,7 @@
         <div class="maps" id="map"></div>
         <div class="profile">
             <div class="picture">
-                <img src="./profile.jpg">
+                <img src="./Assets/profile.jpg">
             </div>
             <div class="name-status">
                 <h2>John Carlo Alberto</h2>
@@ -57,11 +58,37 @@
                             </svg>
                        </button>
                     </a>
-                </div>                                                            
+                </div>
             </div>
         </div>
-        <div class="button">Buttons</div>
-        <div class="company">Company/School</div>
+        <div class="button">
+            <div class="capsule"></div>
+            <div class="experience active" onclick="toggleCapsule('experience')">Experience</div>
+            <div class="education" onclick="toggleCapsule('education')">Education</div>
+          </div>           
+          <div class="company-school">
+            <div class="company">
+                <div class="picture">
+                    <img src="./Assets/Experience/PCL.jpg" alt="Company Logo">
+                </div>
+                <div class="company-name-date-role">
+                    <div class="company-date">February 2025 - Recent</div>
+                    <div class="company-name">Producers Connection Logistics</div>
+                    <div class="company-role">Web Developer</div>
+                </div>
+            </div>
+            <!-- Hidden School Div -->
+            <div class="school">
+                <div class="picture">
+                    <img src="./Assets/Education/STI.png" alt="School Logo">
+                </div>
+                <div class="school-name-date-role">
+                    <div class="school-date">2020 - 2024</div>
+                    <div class="school-name">STI College Dasmariñas</div>
+                    <div class="school-role">Bachelor of Science in Computer Science</div>
+                </div>
+            </div>
+        </div>        
         <div class="technologies">Technologies</div>
         <div class="project">Projects</div>
     </div>

@@ -17,3 +17,20 @@ function initMap() {
 }
 
 document.addEventListener("DOMContentLoaded", initMap);
+
+function toggleCapsule(selected) {
+  let capsule = document.querySelector('.capsule');
+  let companyDiv = document.querySelector('.company');
+  let schoolDiv = document.querySelector('.school');
+
+  if (selected === 'education') {
+      capsule.style.left = "50%";
+      companyDiv.style.display = "none"; 
+      schoolDiv.style.display = "flex";
+  } else {
+      capsule.style.left = "0%";
+      companyDiv.style.display = "flex"; 
+      schoolDiv.style.display = "none"; 
+  }
+}
+
