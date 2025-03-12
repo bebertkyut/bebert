@@ -448,3 +448,104 @@ h2 {
 .visit-button:hover .project-capsule-button svg {
   stroke: black !important;
 }
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .maps,
+  .profile,
+  .button,
+  .company-school,
+  .technologies,
+  .project {
+    width: 95vw;
+    max-width: none;
+    font-size: 1rem;
+    margin: 1vh 0;
+    padding: 10px;
+  }
+
+  .maps {
+    height: 40vh;
+    max-height: 25vh;
+  }
+
+  .profile {
+    height: auto;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .picture {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1vh;
+  }
+
+  .status {
+    text-align: center;
+  }
+
+  .icons {
+    gap: 1vh;
+  }
+
+  .icons svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .button {
+    flex-direction: column;
+    height: auto;
+    max-height: none;
+    gap: 5px;
+  }
+
+  .capsule {
+    width: 80%;
+    left: 10%;
+  }
+
+  .technologies {
+    flex-direction: column;
+    height: auto;
+    flex-wrap: nowrap;
+  }
+
+  .technology-box {
+    width: 90%;
+    height: auto;
+    padding: 10px;
+    font-size: 1.2rem;
+  }
+
+  .project {
+    flex-direction: column;
+    height: auto;
+    row-gap: 3vh;
+  }
+
+  .project-box {
+    width: 90%;
+    height: auto;
+    padding: 10px;
+    font-size: 1.2rem;
+  }
+
+  .project-box img {
+    width: 100%;
+    max-height: 60%;
+  }
+
+  .project-capsule-button {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    width: 100%;
+    justify-content: center;
+  }
+}
