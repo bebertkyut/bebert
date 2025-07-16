@@ -52,6 +52,7 @@ canvas {
   height: 30vh;
   max-height: 23vh;
 }
+
 .profile h2 {
   font-size: 2rem; /* Change this value for the name */
 }
@@ -215,8 +216,6 @@ canvas {
 }
 
 .company-school {
-  min-height: 20vh;
-  max-height: none;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -224,41 +223,19 @@ canvas {
   padding-left: 0;
 }
 
-.company {
-  display: flex;
-  gap: 15px;
-  padding: 4vh;
-  margin-left: 0;
-  width: 100%;
-}
-
-.company-name-date-role {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  font-size: 14px;
-  align-items: flex-start;
-  text-align: left;
-}
-
-.company-name {
-  font-size: 1.75rem;
-}
-
-.company-date {
-  font-size: 1rem;
-}
-
-.company-role {
-  font-size: 1.25rem;
-}
-
+.company,
 .school {
   display: flex;
+  flex-direction: row; /* ensures side-by-side */
+  align-items: flex-start;
   gap: 15px;
-  padding: 4vh;
+  padding: 4vh 0;
+  margin-left: 5vw;
+  width: 100%;
+  flex-wrap: nowrap; /* prevent stacking */
 }
 
+.company-name-date-role,
 .school-name-date-role {
   display: flex;
   flex-direction: column;
@@ -266,18 +243,22 @@ canvas {
   font-size: 14px;
   align-items: flex-start;
   text-align: left;
+  flex: 1;
 }
 
+.company-name,
 .school-name {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
 }
 
+.company-date,
 .school-date {
   font-size: 1rem;
 }
 
+.company-role,
 .school-role {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
 }
 
 .carousel-container {
@@ -352,6 +333,7 @@ canvas {
 .carousel-arrow.right {
   right: -20px;
 }
+
 h2 {
   font-size: 2rem;
   align-items: flex-start;
@@ -478,4 +460,206 @@ h2 {
 
 .visit-button:hover .project-capsule-button svg {
   stroke: black !important;
+}
+
+/* Mobile styles */
+@media (max-width: 430px) {
+  .maps {
+    height: 40vh;
+  }
+
+  .profile {
+    height: 20vh;
+  }
+
+  .profile h2 {
+    font-size: 1.5rem; /* Change this value for the name */
+    margin-left: 5vw;
+  }
+
+  .status-indicator {
+    display: flex;
+    align-items: center;
+    font-size: 0.7rem;
+    margin-left: 5vw;
+  }
+
+  .picture {
+    width: 70px;
+    height: 70px;
+    margin: 0;
+    flex-shrink: 0;
+  }
+
+  .picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .icons {
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+    margin-left: 5vw;
+  }
+
+  .icons svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .rounded-button {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+    gap: 6px;
+  }
+
+  .rounded-button svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .button {
+    height: 50px;
+    padding: 8px;
+  }
+
+  .company,
+  .school {
+    flex-direction: row;
+    align-items: center;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    margin-bottom: 0;
+  }
+
+  .company-name,
+  .school-name {
+    font-size: 0.7rem;
+  }
+
+  .company-role,
+  .school-role,
+  .company-date,
+  .school-date {
+    font-size: 0.5rem;
+  }
+
+  .carousel-container {
+    width: 100vw;
+    padding: 0;
+    margin: 20px;
+  }
+
+  .carousel-track-wrapper {
+    width: 100vw;
+    overflow: hidden;
+    padding: 0;
+  }
+
+  .carousel-track {
+    display: flex;
+    gap: 0;
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .carousel-item {
+    flex: 0 0 90vw;
+    max-width: 90vw;
+    height: 28vw;
+    margin: 2px 5vw; /* Space for box-shadow */
+    box-shadow: 0 0 2vw rgba(255, 255, 255, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    gap: 0;
+  }
+
+  .carousel-item img {
+    width: 14vw;
+    height: 14vw;
+    object-fit: contain;
+  }
+
+  .carousel-arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    z-index: 2;
+  }
+
+  .carousel-arrow.left {
+    left: 5px;
+  }
+
+  .carousel-arrow.right {
+    right: 5px;
+  }
+
+  .project {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    width: 100vw;
+    row-gap: 4vh;
+    padding: 0 5vw;
+  }
+
+  .project-box {
+    width: 100%;
+    height: auto;
+    padding-bottom: 60px; /* space for button at bottom */
+    font-size: 1.2rem;
+  }
+
+  .project-box img {
+    width: 100%;
+    max-height: 180px;
+    margin-top: 1vh;
+  }
+
+  .project-box h3 {
+    font-size: 1.4rem;
+  }
+
+  .project-box p {
+    font-size: 0.95rem;
+  }
+
+  .capsule-container {
+    gap: 6px;
+    padding-left: 0;
+    padding: 0 1vw;
+  }
+
+  .project-capsule {
+    font-size: 0.75rem;
+    padding: 4px 10px;
+  }
+
+  .project-capsule-button {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+    bottom: 10px;
+    left: 10px;
+  }
+
+  .project-capsule-button svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@media (min-width: 431px) and (max-width: 834px) {
+  /* Styles for tablets */
 }

@@ -4,11 +4,25 @@ document.addEventListener("DOMContentLoaded", function () {
   const leftArrow = document.querySelector(".carousel-arrow.left");
   const rightArrow = document.querySelector(".carousel-arrow.right");
 
-  const visibleCount = 4;
-  const itemWidth = items[0].offsetWidth + 20;
+  function getVisibleCount() {
+    // Use 1 for mobile, 4 for desktop/tablet
+    return window.innerWidth <= 430 ? 1 : 4;
+  }
+
+  function getItemWidth() {
+  if (window.innerWidth <= 430) {
+    // 90vw box + 5vw left + 5vw right margin = 100vw
+    return window.innerWidth;
+  } else {
+    return items[0].offsetWidth + 20; // 20px gap for desktop
+  }
+}
+
   let currentIndex = 0;
 
   function updateCarousel() {
+    const visibleCount = getVisibleCount();
+    const itemWidth = getItemWidth();
     track.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
     leftArrow.disabled = currentIndex === 0;
     rightArrow.disabled = currentIndex >= items.length - visibleCount;
@@ -22,15 +36,16 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   rightArrow.addEventListener("click", () => {
-    if (currentIndex < items.length - visibleCount) {
+    if (currentIndex < items.length - getVisibleCount()) {
       currentIndex++;
       updateCarousel();
     }
   });
 
+  window.addEventListener("resize", updateCarousel);
+
   updateCarousel(); // init state
 });
-
 
 function initMap() {
     const location = [14.574501, 121.013504];
