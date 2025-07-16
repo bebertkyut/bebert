@@ -280,49 +280,78 @@ canvas {
   font-size: 1.25rem;
 }
 
-.technologies {
-  height: 30vh;
+.carousel-container {
+  width: 800px;
+  margin: 40px auto 0;
+  position: relative;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
-  background: transparent;
-  box-shadow: none;
-  width: 90vw;
-  max-width: 90vh;
+  overflow: visible;
+  padding: 10px 20px;
 }
 
-.technology-box {
-  width: 22%;
-  height: 80%;
+.carousel-track-wrapper {
+  overflow: hidden;
+  width: 800px;
+  padding: 3px;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 23px; /* updated from 20px to 40px */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  transition: transform 0.4s ease-in-out;
+}
+
+.carousel-item {
+  flex: 0 0 170px; /* adjusted width to fit exactly 4 items */
+  height: 200px; /* you can tweak this as needed */
   background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  color: white;
-  font-size: 1.5rem;
-  text-align: center;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
   color: white;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  text-align: center;
-  gap: 1rem;
+  justify-content: center;
+  gap: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
-.technology-box img,
-.technology-box svg {
+.carousel-item img {
   width: 100px;
   height: 100px;
+  object-fit: contain;
+  transition: transform 0.2s ease-in-out, fill 0.2s ease-in-out,
+    stroke 0.2s ease-in-out;
   filter: brightness(0) invert(1);
-  transition: filter 0.3s ease-in-out;
 }
 
-.technology-box:hover img,
-.technology-box:hover svg {
+.carousel-item img:hover {
+  transform: scale(1.1);
   filter: none;
 }
 
+.carousel-arrow {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.carousel-arrow.left {
+  left: -20px;
+}
+
+.carousel-arrow.right {
+  right: -20px;
+}
 h2 {
   font-size: 2rem;
   align-items: flex-start;

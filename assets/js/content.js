@@ -1,3 +1,37 @@
+document.addEventListener("DOMContentLoaded", function () {
+  const track = document.querySelector(".carousel-track");
+  const items = document.querySelectorAll(".carousel-item");
+  const leftArrow = document.querySelector(".carousel-arrow.left");
+  const rightArrow = document.querySelector(".carousel-arrow.right");
+
+  const visibleCount = 4;
+  const itemWidth = items[0].offsetWidth + 20;
+  let currentIndex = 0;
+
+  function updateCarousel() {
+    track.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+    leftArrow.disabled = currentIndex === 0;
+    rightArrow.disabled = currentIndex >= items.length - visibleCount;
+  }
+
+  leftArrow.addEventListener("click", () => {
+    if (currentIndex > 0) {
+      currentIndex--;
+      updateCarousel();
+    }
+  });
+
+  rightArrow.addEventListener("click", () => {
+    if (currentIndex < items.length - visibleCount) {
+      currentIndex++;
+      updateCarousel();
+    }
+  });
+
+  updateCarousel(); // init state
+});
+
+
 function initMap() {
     const location = [14.574501, 121.013504];
 
