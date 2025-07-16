@@ -39,7 +39,6 @@ canvas {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
   color: white;
-  font-size: 1.5rem;
   margin: 1vh;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
@@ -52,6 +51,9 @@ canvas {
 .profile {
   height: 30vh;
   max-height: 23vh;
+}
+.profile h2 {
+  font-size: 2rem; /* Change this value for the name */
 }
 
 .picture {
