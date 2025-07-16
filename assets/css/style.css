@@ -54,7 +54,7 @@ canvas {
 }
 
 .profile h2 {
-  font-size: 2rem; /* Change this value for the name */
+  font-size: 2rem;
 }
 
 .picture {
@@ -226,13 +226,13 @@ canvas {
 .company,
 .school {
   display: flex;
-  flex-direction: row; /* ensures side-by-side */
+  flex-direction: row;
   align-items: flex-start;
   gap: 15px;
   padding: 4vh 0;
   margin-left: 5vw;
   width: 100%;
-  flex-wrap: nowrap; /* prevent stacking */
+  flex-wrap: nowrap;
 }
 
 .company-name-date-role,
@@ -279,7 +279,7 @@ canvas {
 
 .carousel-track {
   display: flex;
-  gap: 23px; /* updated from 20px to 40px */
+  gap: 23px;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -287,8 +287,8 @@ canvas {
 }
 
 .carousel-item {
-  flex: 0 0 170px; /* adjusted width to fit exactly 4 items */
-  height: 200px; /* you can tweak this as needed */
+  flex: 0 0 170px;
+  height: 200px;
   background: rgba(255, 255, 255, 0.1);
   color: white;
   display: flex;
@@ -571,7 +571,7 @@ h2 {
     flex: 0 0 90vw;
     max-width: 90vw;
     height: 28vw;
-    margin: 2px 5vw; /* Space for box-shadow */
+    margin: 2px 5vw;
     box-shadow: 0 0 2vw rgba(255, 255, 255, 0.5);
     display: flex;
     flex-direction: column;
@@ -618,7 +618,7 @@ h2 {
   .project-box {
     width: 100%;
     height: auto;
-    padding-bottom: 60px; /* space for button at bottom */
+    padding-bottom: 60px;
     font-size: 1.2rem;
   }
 
