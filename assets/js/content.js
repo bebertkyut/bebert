@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // 90vw box + 5vw left + 5vw right margin = 100vw
     return window.innerWidth;
   } else {
-    return items[0].offsetWidth + 20; // 20px gap for desktop
+    return items[0].offsetWidth + 23; // 20px gap for desktop
   }
 }
 
